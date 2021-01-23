@@ -1,5 +1,3 @@
-#!/bin/sh
-
 git clone https://gitlab.com/AJ-Williams1/sarcasm.git
 cd sarcasm
 doas make install
