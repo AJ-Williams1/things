@@ -1,0 +1,11 @@
+#!/bin/sh
+
+git clone https://gitlab.com/AJ-Williams1/sarcasm.git
+cd sarcasm
+doas make install
+
+echo #!/bin/bash\nread -r var < <(echo "dmenu -p 'Sarcasm:'" | sh) ; [[ -n "$var" ]] && echo -n $var | sarcasm | xclip -selection clipboard > ~/.scripts/altcaps
+
+chmod +x altcaps
+
+echo "super + shift + s\n    altcaps" >> ~/.config/sxhkd/sxhkdrc
